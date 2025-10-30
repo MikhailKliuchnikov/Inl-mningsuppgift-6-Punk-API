@@ -1,0 +1,10 @@
+{
+  "name": "cocktail-api-app",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Cocktail API application",
+  "main": "script.js",
+  "scripts": {
+    "start": "node script.js"
+  }
+}

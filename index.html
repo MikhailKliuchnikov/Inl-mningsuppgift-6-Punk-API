@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Coctail API</title>
+</head>
+<body>
+<header>
+    <div>
+        <h1>Welcome to the coctail Database!</h1>
+        <div class="search-wrapper">
+        <label for="search">Search for a coctail</label>
+        <input type="search" id="search" data-search placeholder="Enter coctail name">
+        <div class="searchResults"></div>
+    </div>
+    </div>
+</header>
+
+<main id="root">
+<!-- Dynamic content will be displayed here -->
+</main>
+
+<footer>
+    <h3>Coctail wiki inc.</h3>
+</footer>
+
+
+    <!-- Main landing page for coctail wiki -->
+    <template id="landingPageTpl">
+        <div class="container">
+            <h1>A random coctail suggestion:</h1>
+            <button class="randomCoctail">Get another random Coctail</button>
+            <div class="randomCoctailPresentation"></div>
+        </div>
+    </template>
+
+    <!-- Template for searching page -->
+    <template id="searchPageTpl">
+        <div class="container">
+            <div>
+            <form action="search">
+                <label for="searchbar">Look for a specific coctail by name or other data:</label>
+                <input name="searchbar" type="text" placeholder="Enter coctail info" required>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        </div>
+        
+        <div class="resultGrid"></div>
+    </template>
+
+    <!-- A single coctail preview card template-->
+    <template id="coctailPreviewTpl">
+        <div>
+            <img src="" class="coctailPreview" alt="coctail image">
+            <h5></h5>
+            <span></span>
+            <button class="seeMoreBtn">See more</button>
+        </div>
+    </template>
+
+    <!-- Detailed coctail info -->
+    <template id="CoctailDetailedImfoTpl">
+        <div class="container detailed-cocktail">
+            <button class="back-btn">Back to main page</button>
+            
+            <div class="cocktail-header">
+                <img src="" class="cocktail-image-large" alt="cocktail image">
+                <div class="cocktail-basic-info">
+                    <h1 class="cocktail-name"></h1>
+                    <p class="cocktail-category"></p>
+                    <p class="cocktail-type"></p>
+                    <p class="cocktail-glass"></p>
+                </div>
+            </div>
+            
+            <div class="cocktail-details">
+                <div class="ingredients-section">
+                    <h3>Ingredients & Measurements</h3>
+                    <ul class="ingredients-list"></ul>
+                </div>
+                
+                <div class="instructions-section">
+                    <h3>Instructions</h3>
+                    <p class="instructions-text"></p>
+                </div>
+                
+                <div class="additional-info">
+                    <h3>Additional Information</h3>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <strong>IBA Category:</strong>
+                            <span class="iba-category"></span>
+                        </div>
+                        <div class="info-item">
+                            <strong>Tags:</strong>
+                            <span class="cocktail-tags"></span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+        <!-- Search card template -->
+    <template id="searchCardTpl">
+        <div class="card">
+                <div class="header" data-header></div>
+            </div>
+    </template>
+    <script src="script.js"></script>
+</body>
+</html>
