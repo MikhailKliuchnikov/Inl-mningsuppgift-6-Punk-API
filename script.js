@@ -195,7 +195,7 @@ function renderDetailedInfo(coctailObj) {
   cocktailTags.textContent = tags;
 
   //  BACK BUTTON
-  const backBtn = clone.querySelector(".back-btn");
+  const backBtn = clone.querySelector(".back-to-main-btn");
   backBtn.addEventListener("click", () => {
     renderLandingPage();
   });
