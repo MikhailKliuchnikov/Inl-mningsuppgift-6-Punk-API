@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="RuntimeRegular-m2Odx.otf">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <title>Coctail API</title>
 </head>
 <body>
 <header>
-    <div>
-        <h1>Welcome to the coctail Database!</h1>
-        <div class="search-wrapper">
-        <label for="search">Search for a coctail</label>
-        <input type="search" id="search" data-search placeholder="Enter coctail name">
-        <div class="searchResults"></div>
-    </div>
-    </div>
+
+        <h1>THE COCKTAIL DB</h1>
+        <button id="searchModal">Check out ALL coctails</button>
+        
 </header>
 
 <main id="root">
@@ -23,41 +23,46 @@
 </main>
 
 <footer>
-    <h3>Coctail wiki inc.</h3>
+    <h3 style="color:gray;">Misha's cocktail DB</h3>
 </footer>
 
 
     <!-- Main landing page for coctail wiki -->
     <template id="landingPageTpl">
         <div class="container">
-            <h1>A random coctail suggestion:</h1>
-            <button class="randomCoctail">Get another random Coctail</button>
+            <h1>A random coctail suggestion: <p class="coctailName"></p></h1>
             <div class="randomCoctailPresentation"></div>
+
+            <button class="randomCoctail">Get another random Coctail</button>
         </div>
     </template>
 
     <!-- Template for searching page -->
     <template id="searchPageTpl">
-        <div class="container">
-            <div>
-            <form action="search">
-                <label for="searchbar">Look for a specific coctail by name or other data:</label>
-                <input name="searchbar" type="text" placeholder="Enter coctail info" required>
-                <button type="submit">Search</button>
-            </form>
+        <div class="search-page-container">
+            <button class="back-to-main-btn">← Back to Main Page</button>
+            
+            <h1>Search for Cocktails</h1>
+            
+            <div class="search-input-wrapper">
+                <input type="search" class="search-page-input" placeholder="Search by name, category, or ingredient...">
+            </div>
+            
+            <div class="search-info"></div>
+            
+            <div class="resultGrid"></div>
+            
+            <div class="pagination-controls-wrapper"></div>
         </div>
-        </div>
-        
-        <div class="resultGrid"></div>
     </template>
 
     <!-- A single coctail preview card template-->
     <template id="coctailPreviewTpl">
-        <div>
-            <img src="" class="coctailPreview" alt="coctail image">
-            <h5></h5>
-            <span></span>
-            <button class="seeMoreBtn">See more</button>
+        <div class="cocktail-preview-card">
+            <img src="" class="cocktail-preview-image" alt="cocktail image">
+            <h5 class="cocktail-preview-title"></h5>
+            <span class="cocktail-preview-description"></span>
+            <button class="see-more-btn">See more</button>
         </div>
     </template>
 
