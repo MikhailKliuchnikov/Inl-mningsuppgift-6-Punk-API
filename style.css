@@ -90,7 +90,7 @@ main button:hover {
 .cocktail-preview-card {
     max-width: 350px;
     width: 100%;
-    background: linear-gradient(135deg, #838513 0%, #e7c631 100%);
+    background: linear-gradient(135deg, #50510d 0%, #c0af64 100%);
     border: 3px solid #85b61c;
     border-radius: 20px;
     overflow: hidden;
