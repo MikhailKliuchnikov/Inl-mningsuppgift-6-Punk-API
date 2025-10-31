@@ -1,6 +1,11 @@
-![poster](poster.png)
-
 # Punk API
+
+# DISCLAIMER 
+
+**Since the original beer PunkAPI has been shut down in 2023 and it's GitRepo closed as well, I have taken my freedom and created a similar DB: The Cocktail DB. 
+Instead of Beer the database now provides Cocktails data, but with the same functional as mentioned in the task** 
+
+**Hope you'll enjoy!**
 
 ## Instructions
 
